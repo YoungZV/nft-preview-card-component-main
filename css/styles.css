@@ -1,0 +1,137 @@
+:root {
+    /* ### Primary */
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+
+    --VerydarkbluemainBG: hsl(217, 54%, 11%);
+    --VerydarkbluecardBG: hsl(216, 50%, 16%);
+    --Verydarkblueline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* ### Hover background */
+    --CyanBG: hsl(178, 100%, 50%, 0.5);
+}
+
+body {
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    color: white;
+    background: var(--VerydarkbluemainBG);
+
+}
+
+.main {
+    max-width: 20rem;
+    padding: 1rem;
+    background: var(--VerydarkbluecardBG);
+    border-radius: 1rem;
+}
+
+.card-image {
+    position: relative;
+
+}
+
+.main-image {
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+}
+
+.card-image:hover .main-image {
+    opacity: 0.6;
+
+}
+
+
+.card-image:hover .overlay {
+    opacity: 1;
+    background: var(--CyanBG);
+
+}
+
+.card-image,
+.card-title,
+.card-info,
+.card-info2 {
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    color: var(--White);
+
+}
+
+.card-title:hover {
+    color: var(--Cyan);
+}
+
+.card-info,
+.days {
+    color: var(--Softblue);
+}
+
+.card-info2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--Verydarkblueline);
+    padding-bottom: 1rem;
+}
+
+.prize {
+    color: var(--Cyan);
+    font-weight: bold;
+}
+
+
+.card-info2>p>img {
+    width: 1rem;
+    height: 1rem;
+
+}
+
+.card-info2>p {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
+}
+
+.card-avatar {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--Softblue);
+    font-size: smaller;
+}
+
+.card-avatar>img {
+    width: 2.5rem;
+    border: 0.1rem solid var(--White);
+    border-radius: 10rem;
+}
+
+.card-avatar span {
+    color: var(--White);
+}
+
+.card-avatar span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
