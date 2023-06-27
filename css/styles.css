@@ -63,6 +63,7 @@ body {
 .card-image:hover .overlay {
     opacity: 1;
     background: var(--CyanBG);
+    cursor: pointer;
 
 }
 
@@ -74,11 +75,16 @@ body {
 }
 
 .card-title {
-    color: var(--White);
+    font-size: 0.75rem;
 
 }
 
-.card-title:hover {
+.card-title a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+.card-title a:hover {
     color: var(--Cyan);
 }
 
@@ -121,6 +127,10 @@ body {
     font-size: smaller;
 }
 
+.card-avatar a {
+    text-decoration: none;
+}
+
 .card-avatar>img {
     width: 2.5rem;
     border: 0.1rem solid var(--White);
@@ -131,7 +141,7 @@ body {
     color: var(--White);
 }
 
-.card-avatar span:hover {
+.card-avatar a span:hover {
     color: var(--Cyan);
     cursor: pointer;
 }
